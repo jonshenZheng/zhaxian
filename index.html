@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<ul>
+			<li><img src="img/1-min.jpg" alt=""></li>
+			<li><img src="img/2-min.jpg" alt=""></li>
+			<li><img src="img/3-min.jpg" alt=""></li>
+			<li><img src="img/4-min.jpg" alt=""></li>
+			<li><img src="img/5-min.jpg" alt=""></li>
+			<li><img src="img/6-min.jpg" alt=""></li>
+			<li><img src="img/7-min.jpg" alt=""></li>
+			<li><img src="img/8-min.jpg" alt=""></li>
+			<li><img src="img/9-min.jpg" alt=""></li>
+		</ul>
+	</body>
+	<script>
+		window.onload = function(){
+			var img_list = document.getElementsByTagName('img'),
+				len = img_list.length,
+				src_str;
+
+			for(;len--;){
+				src_str = img_list[len].getAttribute('src').replace('-min','');
+				img_list[len].setAttribute('src',src_str);
+			}
+		}
+	</script>
+</html>
